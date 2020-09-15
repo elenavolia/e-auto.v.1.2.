@@ -1,0 +1,610 @@
+:root {
+  --primary-text-color: #212121;
+  --marked-text-color: #2196f3;
+  --secondary-text-color: #757575;
+  --contrast-text-color: #ffffff;
+  --footer-text-color: #rgba(255, 255, 255, 0.6);
+  --primary-background-color: #ffffff;
+  --icons-background-color: #f5f4fa;
+  --secondary-background-color: #f5f4fa;
+  --footer-background-color: #2f303a;
+  --button-background-color: #2196f3;
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+header {
+  background-color: var(--primary-background-color);
+  font-family: 'Raleway', sans-serif;
+  display: inline;
+  grid-row: 30px;
+}
+
+footer {
+  background-color: var(--footer-background-color);
+  color: var(--footer-text-color);
+  font-family: 'Raleway', sans-serif;
+}
+
+/*utilites*/
+
+link {
+  text-decoration: none;
+  color: none;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*header*/
+
+.page-header {
+  display: flex;
+}
+
+.section {
+  background-color: var(--primary-background-color);
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.container {
+  width: 1230px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container li:not(:last-child) {
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.main-nav :hover,
+.main-nav :focus {
+  color: var(--marked-text-color);
+}
+
+.logo {
+  color: var(--primary-text-color);
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 0.03rem;
+
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.logo :hover {
+  color: var(--marked-text-color);
+}
+
+.logo-e {
+  color: var(--marked-text-color);
+}
+
+.progets {
+  background-color: var(--primary-background-color);
+}
+
+/*site nav*/
+
+.site-nav {
+  color: var(--primary-text-color);
+  letter-spacing: 0.02rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+.site-nav .item + .item {
+  margin-left: 50px;
+}
+
+/* :not(:last-child) {
+  margin-right: 50px;
+  background-color: red;
+}*/
+
+.site-nav :hover,
+.site-nav :focus {
+  color: var(--marked-text-color);
+}
+
+.current {
+  color: var(--marked-text-color);
+}
+
+.unactive {
+  color: var(--primary-text-color);
+}
+
+.current,
+.unactive {
+  display: block;
+  padding-top: 21px;
+  padding-bottom: 21px;
+}
+
+.contacts-header {
+  color: var(--secondary-text-color);
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-weight: 122;
+  letter-spacing: 0.02rem;
+
+  display: inline-flex;
+  align-items: center;
+
+  margin-left: auto;
+}
+
+.contacts-header ul {
+  display: flex;
+}
+
+.contacts-header .item:last-child {
+  margin-right: 25px;
+}
+
+.contacts-header .item .last {
+  margin-left: auto;
+}
+
+.contacts-header :hover,
+.contacts-header :focus {
+  color: var(--marked-text-color);
+}
+
+.contacts .item + .item {
+  display: flex;
+  margin-left: 15px;
+  list-style: none;
+  align-items: center;
+}
+
+.contacts {
+  margin-left: auto;
+}
+
+.lincs-contacts {
+  margin-right: 10px;
+  justify-content: space-evenly;
+}
+
+/* main container*/
+
+.first {
+  background-color: var(--secondary-text-color);
+  text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+.slogan {
+  font-family: Roboto;
+  font-style: normal;
+  font-size: 44px;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--contrast-text-color);
+  letter-spacing: 0.06rem;
+}
+
+.invisible-titel {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.services .item {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.team .list {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.sm .item {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-left: 0;
+}
+
+.button {
+  color: var(--contrast-text-color);
+  background-color: var(--button-background-color);
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 0.06rem;
+
+  width: 200px;
+  height: 50px;
+  left: 700px;
+  top: 430px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+
+  display: block;
+  margin: auto;
+}
+
+.button-titel :hover,
+.button-titel :focus {
+  background-color: var(--button-background-color);
+  color: var(--contrast-text-color);
+}
+.button-titel {
+  background-color: var(--icons-background-color);
+  color: var(--primary-text-color);
+  border-radius: 4px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0.06rem;
+
+  height: 38px;
+}
+
+.feature-list {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 30px;
+}
+
+.sign {
+  border-radius: 4px;
+  justify-content: left;
+}
+
+.feature-item {
+  width: 270px;
+}
+
+.feature-sign {
+  background-color: var(--icons-background-color);
+  width: 270px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.titel {
+  color: var(--primary-text-color);
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 0.03rem;
+  text-transform: uppercase;
+}
+
+.secondary-text {
+  color: var(--secondary-text-color);
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  letter-spacing: 0.03rem;
+}
+
+.section-titel {
+  color: var(--primary-text-color);
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  letter-spacing: 0.03rem;
+
+  text-align: center;
+}
+
+.item-titel {
+  color: var(--contrast-text-color);
+  background-color: rgba(47, 48, 58, 0.8);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 0.03rem;
+  text-transform: uppercase;
+
+  text-align: center;
+  width: 370px;
+  height: 70px;
+}
+
+.team {
+  background-color: var(--secondary-background-color);
+}
+
+.team-list {
+  background-color: var(--primary-background-color);
+}
+
+.team-section {
+  background-color: var(--secondary-background-color);
+}
+
+.team-name {
+  color: var(--primary-text-color);
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.03rem;
+}
+
+.team-position {
+  color: var(--secondary-text-color);
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  letter-spacing: 0.03rem;
+}
+
+.socialmedia-item :hover,
+.socialmedia-item :focus {
+  color: var(--marked-text-color);
+}
+
+.partners-list {
+  border: 1px solid #afb1b8;
+  box-sizing: border-box;
+  border-radius: 4px;
+  width: 170px;
+  height: 90px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  justify-items: stretch;
+
+  margin-right: 30px;
+}
+
+.partners-list :hover,
+.partners-list :focus {
+  color: var(--marked-text-color);
+}
+
+/*footer*/
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo-footer {
+  color: var(--contrast-text-color);
+  font-family: 'Raleway', sans-serif;
+  width: 153px;
+  height: 31px;
+  letter-spacing: 0.03rem;
+
+  margin-left: 80px;
+}
+
+.footer-main {
+  background-color: var(--footer-background-color);
+}
+
+.logo-footer {
+  color: var(--contrast-text-color);
+  width: 153px;
+  margin-left: 80px;
+}
+.footer-adress {
+  color: var(--contrast-text-color);
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  letter-spacing: 0.03rem;
+
+  display: flex;
+  margin-left: 24px;
+  justify-content: space-between;
+}
+
+.footer-contacts {
+  color: var(--secondary-text-color);
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  letter-spacing: 0.03rem;
+
+  margin-left: 20px;
+}
+
+.footer-titel {
+  color: var(--contrast-text-color);
+  background-color: var(--footer-background-color);
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 0.03rem;
+  text-transform: uppercase;
+}
+
+.socialmedia-footer {
+  background-color: var(--footer-background-color);
+  color: var(--primary-background-color);
+}
+
+.ps {
+  color: var(--secondary-text-color);
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  letter-spacing: 0.03rem;
+
+  align-items: center;
+}
+
+.sm-footer {
+  background-color: var(--footer-background-color);
+}
+
+/*Portfolio main container*/
+
+.sites {
+  width: 128px;
+}
+.app {
+  width: 145px;
+}
+.design {
+  width: 130px;
+}
+.marketing {
+  width: 130px;
+}
+
+.description {
+  background-color: var(--button-background-color);
+  color: var(--contrast-text-color);
+
+  width: 370px;
+  height: 294px;
+}
+
+/*.button {
+  color: var(--contrast-text-color);
+  background-color: var(--marked-text-color);
+  font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+  position: absolute;
+  width: 200px;
+  height: 50px;
+  left: 700px;
+  top: 430px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}*/
+
+.link :hover,
+.link :focus {
+  color: var(--marked-text-color);
+}
+
+.section-titel {
+  color: #212121;
+}
+
+/*
+.order-service {
+  position: absolute;
+  width: 136px;
+  height: 30px;
+  left: 732px;
+  top: 440px;
+}*/
+
+.social link {
+  font-weight: 20;
+  color: rgba(0.69, 0.69, 0.72, 1);
+  text-decoration: none;
+
+  height: 20;
+}
+
+.sm-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: inherit;
+}
+
+.contacts-header :hover,
+.contacts-header :focus {
+  color: rgba(0.13, 0.59, 0.95, 1);
+}
+
+.contacts-header:active {
+  color: turquoise;
+}
+
+.link :hover,
+.link :focus {
+  color: var(--marked-text-color);
+}
+
+.link :active {
+  color: blue;
+}
+
+.button-titel {
+  color: var(--primary-text-color);
+  background-color: var(--icons-background-color);
+}
+.button-titel:hover,
+.button-titel:focus {
+  color: var(--contrast-text-color);
+  background-color: var(--button-background-color);
+}
+
+.buttons-list {
+  display: flex;
+  margin-right: 30px;
+  justify-content: space-evenly;
+}
+
+.buttons-list .item {
+  display: inline-flex;
+}
+
+.main-progets .item :not(:last-child) {
+  margin-right: 30px;
+}
+
+.main-progets {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 30px;
+}
+
+.main-progets .item {
+  width: calc((100% - 60px * 2) / 3);
+  margin-right: 30px;
+}
